@@ -1,0 +1,88 @@
+:root {
+    --nav-font: Arial, Helvetica, sans-serif; 
+    --nav-height: 6vh;
+    --UCLA-gold: #FFD100;
+    --UCLA-blue: #2774AE;
+    --UCLA-darkblue: #003B5C;
+    --nav-darkblue: #05004a;
+}
+html {
+    overflow-x: hidden;
+    font-family: var(--nav-font);
+    /* font-size: 1.2em; */
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+hr {
+    width: 45%;
+    color: silver;
+    opacity: 0.5;
+}
+ul {
+    margin: 0;
+}
+li {
+    margin-top: 15px;
+}
+h1 {
+    margin-top: 0;
+    /* text-align: center; */
+}
+img {
+    max-width: 100%;
+}
+label {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#body {
+    margin-top: var(--nav-height);
+    min-height: calc(100vh - 2 * var(--nav-height));
+}
+
+.section {
+    width: 60%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* makes its children columns of the same row */
+.col-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* each column of col-wrapper */
+.col {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.visual {
+    margin: -5vh 0;
+}
+#three-word-pie {
+    /* width: 60%; */
+    max-height: 20em;
+    margin: 0 10%;
+}
+
+#wordcloud {
+    /* width: 60%; */
+    max-height: 20em;
+}

@@ -1,0 +1,129 @@
+/* same old constants and tag styling */
+:root {
+    --nav-font: Arial, Helvetica, sans-serif; 
+    --nav-height: 6vh;
+    --UCLA-gold: #FFD100;
+    --UCLA-blue: #2774AE;
+    --UCLA-darkblue: #003B5C;
+    --nav-darkblue: #05004a;
+}
+html {
+    overflow-x: hidden;
+    font-family: var(--nav-font);
+    /* font-size: 1.2em; */
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+hr {
+    width: 45%;
+    color: silver;
+    opacity: 0.5;
+}
+ul {
+    margin: 0;
+}
+li {
+    margin-top: 15px;
+}
+
+/* next/prev button styling */
+input[type=button] {
+    cursor: pointer;
+    background: white;
+    width: 5vw;
+    height: 3vh;
+    border-radius: 5px;
+}
+input[type=button]:hover {
+    background: var(--UCLA-gold);
+}
+
+#explore-body {
+    width: 100vw;
+    padding-top: var(--nav-height);
+}
+.question-display {
+    width: 60%;
+    margin: 40px auto;
+}
+
+.section-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.make-cols {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.col {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.question-wrapper {
+    width: 50%;
+}
+
+.main-image {
+    max-height: 20vh;
+    max-width: 100%;
+}
+
+#img-choices-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+}
+.img-choice {
+    margin-right: 20px;
+    max-height: 10vh;
+}
+
+#txt-choices-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+}
+.txt-choice {
+    min-width: 10%;
+    margin-right: 5px;
+    padding: 5px;
+    border: black solid 1px;
+    display: flex;
+    justify-content: center;
+}
+
+/* json-display */
+.json-display {
+    /* make it line up with the right side of the div */
+    width: calc(100% - 1em - 1px);   
+}
+.bibtax {
+    white-space: pre-wrap;
+    padding-left: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

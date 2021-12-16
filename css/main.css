@@ -1,0 +1,234 @@
+/* some constants used throughout the website*/
+:root {
+    --nav-font: Arial, Helvetica, sans-serif; 
+    --nav-height: 6vh;
+    --UCLA-gold: #FFD100;
+    --UCLA-blue: #2774AE;
+    --UCLA-darkblue: #003B5C;
+    --nav-darkblue: #05004a;
+}
+
+/* styled tags that look decent */
+html {
+    overflow-x: hidden;
+    font-family: var(--nav-font);
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    line-height: 125%;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+a:focus, a:hover {
+    color: #005587;
+    text-decoration: underline;
+}
+a.hover {
+    text-decoration: none;
+}
+a.hover:hover {
+    text-decoration: underline;
+}
+hr {
+    width: 75%;
+    color: silver;
+    opacity: 0.5;
+}
+img {
+    max-width: 100%;
+}
+ul {
+    margin: 0;
+}
+li {
+    margin-top: 15px;
+}
+
+/* for the nice table on the home page */
+table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1 em;
+    font-family: sans-serif;
+    width: 30vw;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+thead tr {
+    background-color: var(--UCLA-darkblue);
+    color: #ffffff;
+    text-align: left;
+}
+th, td {
+    padding: 12px 10px;
+}
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+tbody tr:last-of-type {
+    border-bottom: 2px solid var(--UCLA-darkblue);
+}
+
+/* used only once on the home page */
+strong {
+    color: var(--UCLA-blue);
+}
+
+/* anchor tag for nav button scrolling */
+.anchor {
+    position: relative;
+    display: block;
+    /* visibility: hidden; */
+    top: calc(-1 * var(--nav-height));
+    height: 1px;
+}
+
+
+/* the banner */
+#title {
+    margin-top: var(--nav-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(50vh - var(--nav-height));
+    width: 100vw;
+    left: 0vw;
+    font-weight: bold;
+    color: white;
+    /* background: linear-gradient(to bottom, var(--nav-darkblue), var(--UCLA-blue)); */
+    background: linear-gradient(180deg, var(--nav-darkblue), var(--UCLA-blue));
+    /* background: linear-gradient(, var(--UCLA-darkblue), var(--UCLA-blue) 60%, white); */
+}
+#title-icon {
+    width: 3em;
+    margin: 10px;
+}
+/* used to center the title */
+#title-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#title-text {
+    font-size: 3em;
+}
+#subtitle-text {
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 125%;
+    margin: -0.5em;
+}
+
+/* change this to adjust the vertical position of the title*/
+#title-padding-bottom {
+    font-size: 1.5em;
+}
+
+/* body of the page */
+#body {
+    width: 60vw;
+    margin: auto;
+}
+
+.section {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+/* shows three examples on the home page */
+#example-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.example-img {
+    /* width: 15vw; */
+    width: 100%;
+}
+
+/* makes its children independent columns on the same row */
+.makecol {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#overview-left {
+    width: 70%;
+}
+#overview-right {
+    width: 35%;
+}
+
+/* not very important. Tried to make the website responsive */
+@media only screen and (max-width: 1000px) {
+    #body {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        left: 0;
+    }
+    .section {
+        width: 95%;
+        padding: 2.5%;
+    }
+    #overview-content-wrapper {
+        flex-direction: column;
+    }
+    #overview-left, #overview-right {
+        width: 100%;
+    }
+    table {
+        display: none;
+    }
+}
+
+/* #task-pie-chart {
+    
+} */
+.col-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.col {
+    width: 48%;
+}
+
+.bibtax {
+    padding-left: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.8em;
+}
+
+.ext-link {
+    /* color: var(--UCLA-blue); */
+    color: #007bff;
+    /* text-decoration: underline; */
+}
+
+
+#cc-img {
+    --width: 40%;
+    width: var(--width);
+    margin: 0 calc(calc(100% - var(--width)) / 2);
+}

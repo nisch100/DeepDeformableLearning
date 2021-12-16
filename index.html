@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDL</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="javascript/index.js" defer></script>
+</head>
+<body>
+    <div id="nav">
+        <div id="icon">
+            
+            <p>DDL</p>
+        </div>
+        <div>
+            <a class="nav-button" href="#home">Home</a>
+            <a class="nav-button" href="#about">About</a>
+            <a class="nav-button" href="#overview">Overview</a>
+            <a class="nav-button" href="#methods">Methods</a>
+            <a class="nav-button" href="#dataset">Dataset</a>
+            <a class="nav-button" href="#experiments">Experiments</a>
+        </div>
+    </div>
+
+    <!-- anchor for the home button -->
+    <div id="home" style="position: absolute; top: 0;"></div>
+
+    <!-- banner -->
+    <div id="title">
+        <div id="title-wrapper">
+            
+            <p id="title-text">Deep Deformable Learning</p>
+        </div>
+        <p id="subtitle-text">
+            DDL: Deep Deformable Learning for Image Segmentation
+        </p>
+        <br>
+        <p>
+            <i>Arjun Kallapur, Feiyang Chen, Nischal Chandra, Sanjeev Venkatesan, Tianyi Xie, Vaibhav Kumar</i>
+            <!-- <br> -->
+            <center><i>Group 9</i></center>
+        </p>
+    
+        <!-- raise the title and subtitle up a little bit -->
+        <p id="title-padding-bottom">&nbsp;</p>
+    </div>
+
+
+    <!-- the main body of the page -->
+    <!-- each section uses an empty div as an anchor -->
+    <div id="body">
+        <div class="section">
+            <div id="about" class="anchor"></div>
+            <h1>What is DDL?</h1>
+            <s>Deadline?</s>
+            <br>
+            <strong>Deep Deformable Learning!</strong>
+            <!-- <p style="line-height: 150%">
+                <s>Deadline?</s>
+                <br>
+                <strong>Deep Deformable Learning!</strong>
+            </p> -->
+
+        </div>
+        <hr>
+        <div class="section">
+            <div id="overview" class="anchor"></div>
+            <h1>Overview</h1>
+            <div >
+                Image segmentation is a computer vision task of extracting pixel-wise mask segments of objects for an image. While modern Deep Learning-based models have achieved great success in various image segmentation tasks such as scene understanding, medical image analysis, applications for driver-less cars and more, they can still be improved in terms of sheer performance, model explainibility and computational complexity. In this work we will explore the effectiveness of deep learning based models, deformable models and finally the combination of the two over various Image Segmentation datasets. We aim to combine the classical geometry and physics based approach of deformable models with modern large-scale advances in deep learning in order to propose a novel model architecture. We will finally perform an empirical analysis of various models on a suite of datasets and metrics to do a comparative case study.
+            </div>
+        </div>
+
+        <hr>
+        <div class="section">
+            <div id="methods" class="anchor"></div>
+            <h1>Methods</h1>
+            <div >
+                <h3>Classical Deformable Models</h3>
+                    <ul>
+                        <li>Chan-Vese Level Sets</li>
+                            <ul>
+                                <li>Can handle noisy images</li>
+                                <li>Useful when boundaries are not defined by gradients</li>
+                                <li>Level sets evolve iteratively to minimize an energy</li>
+                            </ul>
+                        <li>Morphological Snakes</li>
+                            <ul>
+                                <li>Family of snakes used in image segmentation</li>
+                                <li>Use morphological operators (dilation, erosion) instead of PDE models</li>
+                                <li>Numerical methods help with computational speed and stability</li>
+                            </ul>
+                    </ul>
+                <h3>Deep Learning Models</h3>
+                    <ul>
+                        <li>CNNs</li>
+                            <ul>
+                                <li>ResNet</li>
+                                <li>ResNext</li>
+                                <li>Inception</li>
+                            </ul>
+                        <li>U-Net</li>
+                            <ul>
+                                <li>Encoder: reduce spatial information + increase feature information</li>
+                                <li>Decoder: increase spatial information + decrease feature map</li>
+                                <li>Skip connections between layers</li>
+                            </ul>
+                        <li>R-CNN + variants</li>
+                            <ul>
+                                <li>Fast R-CNN</li>
+                                <li>Faster R-CNN</li>
+                                <li>YOLO</li>
+                                <li>SSD</li>
+                            </ul>
+                    </ul>
+                <h3>Deep Deformable Models</h3>
+                    <ul>
+                        <li>Deformable Convolution v1</li>
+                            <ul>
+                                <li>Deformable Convolution: Adding offsets to the regular grid sampling locations in the standard convolution</li>
+                                <li>Deformable RoI Pooling: Adding offsets to each bin position in the regular bin partition of the previous RoI pooling</li>
+                                <li>Both modules are lightweight, they can easily be embedded in the existing models (such as CNNs) without additional supervision signals and are suitable for end-to-end learning</li>
+                            </ul>
+                        <li>Deformable Convolution v2</li>
+                            <ul>
+                                <li>Stacking More Deformable Conv Layers</li>
+                                <li>Modulated Deformable Modules</li>
+                                <li>R-CNN Feature Mimicking</li>
+                            </ul>
+                        <li>Deformable U-Net</li>
+                            <ul>
+                                <li>Encoder: Encode feature information using deformable convolutions</li>
+                                <li>Decoder: Decode feature information using transposed deformable convolutions</li>
+                                <li>Pooling: Replace fixed kernel average/max pooling with learned deformable kernels with offsets</li>
+                            </ul>
+                    </ul>
+
+            </div>
+        </div>
+        
+        <hr>
+        <div class="section">
+            <div id="dataset" class="anchor"></div>
+            <h1>Dataset</h1>
+            <p>
+                Our dataset is from kaggle: <a href="https://www.kaggle.com/mateuszbuda/lgg-mri-segmentation" class="ext-link">Brain MRI segmentation</a>.
+                <br>
+            </p>
+            <p>
+                This dataset contains brain MR images together with manual FLAIR abnormality segmentation masks.
+                The images were obtained from The Cancer Imaging Archive (TCIA).
+                They correspond to 110 patients included in The Cancer Genome Atlas (TCGA) lower-grade glioma collection with at least fluid-attenuated inversion recovery (FLAIR) sequence and genomic cluster data available.
+                Tumor genomic clusters and patient data is provided in data.csv file.
+            </p>
+            <img src="res/dataset.png" >
+
+        </div>
+        <hr>
+        <div class="section">
+            <div id="experiments" class="anchor"></div>
+            <h1>Experiments</h1>
+            
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer">
+        © CS 269: Deformable Models in Computer Vision | Advisor: Prof. Demetri Terzopoulos
+    </div>
+</body>
+</html>
