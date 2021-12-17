@@ -21,6 +21,7 @@
             <a class="nav-button" href="#about">About</a>
             <a class="nav-button" href="#overview">Overview</a>
             <a class="nav-button" href="#methods">Methods</a>
+            <a class="nav-button" href="https://www.youtube.com/">Report</a>
             <a class="nav-button" href="#dataset">Dataset</a>
             <a class="nav-button" href="#experiments">Experiments</a>
         </div>
@@ -163,7 +164,27 @@
         <div class="section">
             <div id="experiments" class="anchor"></div>
             <h1>Experiments</h1>
-            
+                <p>As a part of our experiments we  implemented three different models and 
+                    evaluate the metrics based on these. The models implemented were </p>
+                    <ul>
+                        <li>U-Net</li>
+                        <li>Deformable U-Net</li>
+                        <li>TranResUNet</li>
+                    </ul>
+                <p>While U-Net served as our baseline model for project purposes, we implemented a transformer 
+                    based U-Net model named TransResUNet better utlize the power of transformers. Finally we implemented
+                    a third model, Deformable U-Net. These models were evaluated based on three different losses namely   </p>
+                <ul>
+                    <li>Cross Entropy Loss</li>
+                    <li>Dice Loss</li>
+                    <li>Active Contour Loss</li>
+                </ul>
+
+                <p>Furthermore the metrics used for evaluation were </p>
+                <ul>
+                    <li>Mean IOU</li>
+                    <li>Dice metric</li>
+                </ul>
         </div>
     </div>
 
